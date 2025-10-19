@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Development Introduction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Website Development Introduction</h1>
+        
+        <p class="description">
+            Buatkan web yang berisi form untuk menginput nama, email, dan alamat. Tambahkan button submit. 
+            Ketika user klik submit web akan menampilkan data dari form tersebut di bawahnya. Tambahkan 
+            validasi setiap input ketika user klik tombol submit untuk memastikan semua input diisi. 
+            Buatlah semenarik mungkin tampilan web tersebut.
+        </p>
+
+        <div class="content-wrapper">
+            <!-- Form Kosong (Kondisi Awal) -->
+            <div class="form-container">
+                <h2>Kondisi sebelum diisi</h2>
+                <div class="form-box">
+                    <h3>Form Data Diri</h3>
+                    <form id="dataForm">
+                        <div class="form-group">
+                            <label for="nama">Nama:</label>
+                            <input type="text" id="nama" name="nama" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="alamat">Alamat:</label>
+                            <textarea id="alamat" name="alamat" rows="4" class="form-input"></textarea>
+                        </div>
+                        <div class="button-group">
+                            <button type="submit" class="submit-btn">submit</button>
+                            <button type="reset" class="reset-btn">reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Hasil Output -->
+            <div class="result-container" id="resultContainer" style="display: none;">
+                <h2>Berikut adalah contoh ketika klik submit</h2>
+                <div class="form-box">
+                    <h3>Form Data Diri</h3>
+                    <form>
+                        <div class="form-group">
+                            <label>Nama:</label>
+                            <input type="text" id="displayNama" class="form-input" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Email:</label>
+                            <input type="email" id="displayEmail" class="form-input" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Alamat:</label>
+                            <textarea id="displayAlamat" rows="4" class="form-input" readonly></textarea>
+                        </div>
+                        <button type="button" class="submit-btn">submit</button>
+                    </form>
+                </div>
+                
+                <!-- Tabel Data -->
+                <div class="data-table">
+                    <table>
+                        <tr>
+                            <td>Nama</td>
+                            <td id="tableName"></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td id="tableEmail"></td>
+                        </tr>
+                        <tr>
+                            <td>Alamat</td>
+                            <td id="tableAddress"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
